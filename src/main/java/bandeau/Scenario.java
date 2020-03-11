@@ -14,14 +14,14 @@ import java.util.HashMap;
  */
 public class Scenario {
     
-    private ArrayList<Effet> effets;
+    private ArrayList<Effet> effets= new ArrayList();
     
     private Bandeau bandeau;
     
     public Scenario(Bandeau b){
         this.bandeau = b;
         effets.add(new Rotation(bandeau, 90));
-        effets.add(new Zoom(bandeau, 10));
+        effets.add(new Zoom(bandeau, 100));
     }
     
     public Scenario(Bandeau b, ArrayList<Effet> effets){

@@ -22,7 +22,7 @@ public class main {
             
             
             //Lancement de la séquence
-            Scenario.run();
+            s.run();
             
             
     }
