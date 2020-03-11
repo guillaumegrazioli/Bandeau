@@ -11,9 +11,17 @@ package bandeau;
  */
 public class main {
     public static void main(String[] args) {
-	    Bandeau b = new Bandeau();
-            Scenario s = new Scenario(b);
             
+            //Création bandeau
+	    Bandeau monBandeau = new Bandeau();
+            monBandeau.setMessage("Hello");
+            monBandeau.sleep(1000);
+            
+            //Création Sceanrio
+            Scenario s = new Scenario(monBandeau);
+            
+            
+            //Lancement de la séquence
             Scenario.run();
             
             

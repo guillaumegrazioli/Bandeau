@@ -12,10 +12,14 @@ package bandeau;
 public class Rotation extends Effet{
     private int angle;
     
-    public Rotation(int a){
+    public Rotation(Bandeau bandeau, int a){
+        super(bandeau);
         angle = a;
     }
     public void run(){
-        
+        for (int i = 0; i <= angle; i++) {
+		bandeau.setRotation(2*Math.PI*i / 100);
+		bandeau.sleep(100);
+	}
     }
 }
