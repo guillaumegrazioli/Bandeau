@@ -5,6 +5,7 @@
  */
 package bandeau;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -13,7 +14,26 @@ import java.util.HashMap;
  */
 public class Scenario {
     
-    private HashMap<Effet,Integer> effets;
+    private ArrayList<Effet> effets;
+    
+    private Bandeau bandeau;
+    
+    public Scenario(Bandeau b){
+        this.bandeau = b;
+        effets.add(new Rotation(bandeau, 90));
+        effets.add(new Zoom(bandeau, 10));
+    }
+    
+    public Scenario(Bandeau b, ArrayList<Effet> effets){
+        
+    }
+    
+    public void run(){
+        int i;
+        for (i = 0; i<this.effets.size(); i++){
+            effets.get(i).run();
+        }
+    }
     
     
 }
