@@ -23,6 +23,7 @@ public class Clignotant extends Effet {
         String message = bandeau.getMessage();
         for (int i = 0; i < this.nbclign; i++) {
             bandeau.setMessage("");
+            this.bandeau.sleep(200);
             bandeau.setMessage(message);
         }
     }
