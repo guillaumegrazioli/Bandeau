@@ -20,7 +20,7 @@ public class Scenario {
     
     public Scenario(Bandeau b){
         this.bandeau = b;
-        effets.add(new Rotation(bandeau, 90));
+        effets.add(new Rotation(bandeau, 180));
         effets.add(new Zoom(bandeau, 100));
     }
     

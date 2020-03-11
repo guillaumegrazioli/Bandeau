@@ -18,8 +18,8 @@ public class Rotation extends Effet{
     }
     public void run(){
         for (int i = 0; i <= angle; i++) {
-		bandeau.setRotation(2*Math.PI*i / 100);
-		bandeau.sleep(100);
+		bandeau.setRotation(Math.PI*i / angle);
+		bandeau.sleep(25);
 	}
     }
 }
