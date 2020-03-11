@@ -15,6 +15,7 @@ import java.util.HashMap;
 public class Scenario {
     
     private ArrayList<Effet> effets= new ArrayList();
+    private ArrayList<Integer> iterations = new ArrayList();
     
     private Bandeau bandeau;
     
@@ -25,15 +26,25 @@ public class Scenario {
     }
     
     public Scenario(Bandeau b, ArrayList<Effet> effets){
-        
-    }
-    
-    public void run(){
-        int i;
-        for (i = 0; i<this.effets.size(); i++){
-            effets.get(i).run();
+        this.bandeau = b;
+        for (int i = 0; i<this.effets.size(); i++){
+           effets.add(this.effets.get(i));
         }
     }
     
+    public void run(){
+        
+        for (int i = 0; i<this.effets.size(); i++){
+           for (int j = 0; j<this.iterations.get(i); j++){
+            effets.get(i).run();
+           }
+        }
+        
+        
+            
+        }
+        
+    }
     
-}
+    
+
