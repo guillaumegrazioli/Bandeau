@@ -25,11 +25,10 @@ public class Scenario {
         effets.add(new Zoom(bandeau, 100));
     }
     
-    public Scenario(Bandeau b, ArrayList<Effet> effets){
+    public Scenario(Bandeau b, ArrayList<Effet> effets, ArrayList<Integer> iterations){
         this.bandeau = b;
-        for (int i = 0; i<this.effets.size(); i++){
-           effets.add(this.effets.get(i));
-        }
+        this.effets = effets;
+        this.iterations = iterations;
     }
     
     public void run(){
