@@ -9,13 +9,13 @@ package bandeau;
  *
  * @author mborde01
  */
-public class Rotation extends Effet{
-    private int angle;
-    
-    public Rotation(int a){
-        angle = a;
-    }
-    public void run(){
-        
+public class main {
+    public static void main(String[] args) {
+	    Bandeau b = new Bandeau();
+            Scenario s = new Scenario(b);
+            
+            Scenario.run();
+            
+            
     }
 }
