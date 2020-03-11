@@ -9,6 +9,14 @@ package bandeau;
  *
  * @author ggraziol
  */
-class Effet {
+abstract class Effet {
+    
+    public Bandeau bandeau;
+    
+    public Effet(Bandeau bandeau){
+        this.bandeau=bandeau;
+    }
+    
+    public abstract void run();
     
 }
